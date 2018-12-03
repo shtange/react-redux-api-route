@@ -14,7 +14,10 @@ const fetchUserList = () => (
 );
 
 const fetchUserListSuccess = (userList) => (
-  {type: types.FETCH_USER_LIST_SUCCESS, userList}
+  {
+    type: types.FETCH_USER_LIST_SUCCESS,
+    userList
+  }
 );
 
 const fetchUserDetails = (username) => (
@@ -28,7 +31,21 @@ const fetchUserDetails = (username) => (
 );
 
 const fetchUserDetailsSuccess = (userProfile) => (
-  {type: types.FETCH_USER_DETAILS_SUCCESS, userProfile}
+  {
+    type: types.FETCH_USER_DETAILS_SUCCESS,
+    userProfile
+  }
+);
+
+const clearUserDetails = () => (
+  (dispatch) =>
+    dispatch(clearUserDetailsSuccess())
+);
+
+const clearUserDetailsSuccess = () => (
+  {
+    type: types.CLEAR_USER_DETAILS_SUCCESS
+  }
 );
 
 
@@ -36,5 +53,6 @@ export {
   fetchUserList,
   fetchUserListSuccess,
   fetchUserDetails,
-  fetchUserDetailsSuccess
+  fetchUserDetailsSuccess,
+  clearUserDetails
 };
