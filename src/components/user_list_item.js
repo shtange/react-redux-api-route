@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 
 class UserListItem extends React.Component {
@@ -8,13 +7,17 @@ class UserListItem extends React.Component {
     const {login, html_url, avatar_url} = this.props;
     
     return (
-      <li className="users-list-item">
-        <Link to={`/user/${login}`}>
-          <h3>User #1</h3>
-          <p>{login} {html_url}</p>
+      <li className="user-list-item">
+        <button onClick={this.props.onClick.bind(this)}>
           {avatar_url &&
             <img src={avatar_url} width="100" alt="" />}
-        </Link>
+          {login &&
+            <h3>{login}</h3>}
+          {html_url &&
+            <p>
+              <a href={html_url}>profile link</a>
+            </p>}
+        </button>
       </li>
     );
   }

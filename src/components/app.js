@@ -4,6 +4,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import UserList from '../containers/user_list';
 import UserProfile from '../containers/user_profile';
 import PageNotFound from '../components/content/page_not_found';
+import '../index.css';
 
 class App extends Component {
   render() {

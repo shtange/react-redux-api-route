@@ -1,0 +1,25 @@
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+
+.user-list-item {
+  display: inline-block;
+}
+.user-list-item button {
+  padding: 0;
+  background-color: white;
+  border-color: lightgrey;
+}
+.user-list-item button:hover {
+  background-color: floralwhite;
+}
+.user-list-item + .user-list-item button {
+  border-left-width: 0;
+}
+
+.user-profile {
+  padding: 12px;
+}
