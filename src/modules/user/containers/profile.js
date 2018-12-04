@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import ButtonGoBack from '../components/content/button_go_back';
-import UserDetails from '../components/user_details';
-import {fetchUserDetails, clearUserDetails} from '../actions/user_actions';
+import ButtonGoBack from '../../../components/content/button_go_back';
+import ProfileDetails from '../components/profile_details';
+import {fetchUserDetails, clearUserDetails} from '../actions';
 
 
-class UserProfile extends React.Component {
+class Profile extends React.Component {
 
   componentWillMount() {
     const {match: {params}} = this.props;
@@ -25,7 +25,7 @@ class UserProfile extends React.Component {
     return userProfile && !!Object.keys(userProfile).length ? (
       <div className="user-profile">
         <ButtonGoBack />
-        <UserDetails {...userProfile} />
+        <ProfileDetails {...userProfile} />
       </div>
     ) : null;
   }
@@ -45,4 +45,4 @@ const mapDispatchToProps = (dispatch) => (
   }, dispatch)
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

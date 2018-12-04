@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import UserListItem from '../components/user_list_item';
-import '../styles/user.css';
+import ListItem from '../components/list_item';
+import '../../../styles/user.css';
 
 
-class UserList extends React.Component {
+class List extends React.Component {
 
   render() {
     const {userList} = this.props;
@@ -12,7 +12,7 @@ class UserList extends React.Component {
     return userList && !!userList.length ? (
       <ul className="user-list">
         {(userList || []).map((user) =>
-          <UserListItem
+          <ListItem
             key={user.id}
             {...user}
             onClick={() => {
@@ -30,4 +30,4 @@ const mapStateToProps = (state) => (
   }
 );
 
-export default connect(mapStateToProps, null)(UserList);
+export default connect(mapStateToProps, null)(List);

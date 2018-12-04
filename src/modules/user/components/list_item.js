@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class UserListItem extends React.Component {
+class ListItem extends React.Component {
 
   render() {
     const {login, html_url, avatar_url} = this.props;
@@ -24,4 +24,4 @@ class UserListItem extends React.Component {
 
 }
 
-export default UserListItem;
+export default ListItem;
