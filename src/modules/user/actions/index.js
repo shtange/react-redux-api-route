@@ -1,5 +1,5 @@
-import * as types from './action_types';
-import GitHubApi from '../../../services/github_api';
+import * as actionTypes from './action_types';
+import GitHubApi from '../../../imports/services/github_api';
 
 const apiService = new GitHubApi();
 
@@ -15,7 +15,7 @@ const fetchUserList = () => (
 
 const fetchUserListSuccess = (userList) => (
   {
-    type: types.FETCH_USER_LIST_SUCCESS,
+    type: actionTypes.FETCH_USER_LIST_SUCCESS,
     userList
   }
 );
@@ -32,7 +32,7 @@ const fetchUserDetails = (username) => (
 
 const fetchUserDetailsSuccess = (userProfile) => (
   {
-    type: types.FETCH_USER_DETAILS_SUCCESS,
+    type: actionTypes.FETCH_USER_DETAILS_SUCCESS,
     userProfile
   }
 );
@@ -44,7 +44,7 @@ const clearUserDetails = () => (
 
 const clearUserDetailsSuccess = () => (
   {
-    type: types.CLEAR_USER_DETAILS_SUCCESS
+    type: actionTypes.CLEAR_USER_DETAILS_SUCCESS
   }
 );
 

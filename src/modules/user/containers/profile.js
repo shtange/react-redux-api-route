@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import ROUTES from '../../../imports/constants/routes';
 import ButtonGoBack from '../../../components/content/button_go_back';
 import ProfileDetails from '../components/profile_details';
 import {fetchUserDetails, clearUserDetails} from '../actions';
@@ -24,7 +25,7 @@ class Profile extends React.Component {
 
     return userProfile && !!Object.keys(userProfile).length ? (
       <div className="user-profile">
-        <ButtonGoBack />
+        <ButtonGoBack toPath={ROUTES.USER.LIST} />
         <ProfileDetails {...userProfile} />
       </div>
     ) : null;
