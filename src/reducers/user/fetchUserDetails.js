@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/action_types';
+import * as actionTypes from '../../actions/user/types';
 
 export default function fetchUserDetailsReducer(state = {}, action) {  
   switch(action.type) {

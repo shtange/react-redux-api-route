@@ -1,12 +1,11 @@
 import Axios from 'axios';
-
-const GITHUB_API_URL = 'https://api.github.com';
+import APP_CONSTANTS from '../constants/appConstants';
 
 class GitHubApi {
 
   constructor() {
     this.axios = Axios.create({
-      baseURL: GITHUB_API_URL,
+      baseURL: APP_CONSTANTS.GITHUB_API_URL,
       timeout: 5000,
       headers: {
         'Content-Type': 'application/json'
@@ -19,7 +18,7 @@ class GitHubApi {
    */
   getUserList() {
     return this.axios.get('/users', {params: {
-      per_page: 100
+      per_page: APP_CONSTANTS.USER_LIST_LIMIT
     }});
   }
 

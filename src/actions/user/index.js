@@ -1,5 +1,5 @@
-import * as actionTypes from './action_types';
-import GitHubApi from '../../../imports/services/github_api';
+import * as actionTypes from './types';
+import GitHubApi from '../../services/githubAPI';
 
 const apiService = new GitHubApi();
 

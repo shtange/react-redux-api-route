@@ -4,7 +4,7 @@ import React from 'react';
 class ProfileDetails extends React.Component {
 
   render() {
-    const {name, avatar_url, created_at, ...props} = this.props;
+    const { name, avatar_url, created_at, ...props } = this.props;
 
     const createdAt = created_at ? new Date(created_at) : null;
 

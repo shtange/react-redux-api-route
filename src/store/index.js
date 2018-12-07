@@ -1,7 +1,7 @@
 import {applyMiddleware, createStore, compose} from 'redux';
 import ReduxThunk from 'redux-thunk';
-import {fetchUserList} from '../modules/user/actions';
 import rootReducer from '../reducers';
+import { fetchUserList } from '../actions/user';
 
 
 const enhancers = [

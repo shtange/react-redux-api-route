@@ -1,10 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import ROUTES from '../../../imports/constants/routes';
-import ButtonGoBack from '../../../components/content/button_go_back';
-import ProfileDetails from '../components/profile_details';
-import {fetchUserDetails, clearUserDetails} from '../actions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import ROUTES from '../../constants/routes';
+import ButtonGoBack from '../../components/Button/GoBack';
+import ProfileDetails from '../../components/User/ProfileDetails';
+import { fetchUserDetails, clearUserDetails } from '../../actions/user';
 
 
 class Profile extends React.Component {
@@ -21,7 +21,7 @@ class Profile extends React.Component {
   }
 
   render() {
-    const {userProfile} = this.props;
+    const { userProfile } = this.props;
 
     return userProfile && !!Object.keys(userProfile).length ? (
       <div className="user-profile">
